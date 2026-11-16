@@ -1,0 +1,9 @@
+project: savantenvs/teeworlds
+target: fuzz_unpacker
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_unpacker/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_unpacker
+    libfuzzer: true
+    timeout: 5

@@ -1,0 +1,9 @@
+project: savantenvs/teeworlds
+target: fuzz_console
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_console/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_console
+    libfuzzer: true
+    timeout: 5

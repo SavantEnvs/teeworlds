@@ -1,0 +1,10 @@
+project: savantenvs/teeworlds
+target: fuzz_map
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_map/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_map
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_map/fuzz_map.dict
+    timeout: 5
